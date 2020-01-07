@@ -218,5 +218,8 @@ else
 endif
 
 subdir('src')
-subdir('sample')
-subdir('test')
+
+if not meson.is_subproject()
+	subdir('sample')
+	subdir('test')
+endif
